@@ -1,5 +1,6 @@
 package com.sayan.leetcode.arrays.easy;
 
+@SuppressWarnings(value = { "unused" })
 public class NumbersWithEvenDigits {
 	
 	
