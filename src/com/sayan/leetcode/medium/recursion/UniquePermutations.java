@@ -1,25 +1,14 @@
 package com.sayan.leetcode.medium.recursion;
 
 import java.util.*;
-import java.lang.*;
 import java.io.*;
 
 public class UniquePermutations {
 
 	public static void main(String[] args) throws IOException
     {
-		/*
-		 * BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); int
-		 * T = Integer.parseInt(br.readLine().trim()); while(T-->0) { int n =
-		 * Integer.parseInt(br.readLine().trim()); String[] s1 =
-		 * br.readLine().trim().split(" "); int[] nums = new int[n]; for(int i = 0; i <
-		 * n; i++)nums[i] = Integer.parseInt(s1[i]); Solution obj = new Solution();
-		 * int[][] ans = obj.permuteUnique(nums); for(int i = 0; i < ans.length; i++){
-		 * for(int j = 0; j < ans[i].length; j++){ System.out.print(ans[i][j] + " "); }
-		 * System.out.println(); } }
-		 */
         int[] nums=new int[] {-9,7,-5,3,7,-5,-5,8};
-        Solution obj = new Solution();
+        PermuteUnique obj = new PermuteUnique();
         int[][] ans = obj.permuteUnique(nums);
         for(int i = 0; i < ans.length; i++){
             for(int j = 0; j < ans[i].length; j++){
@@ -30,18 +19,18 @@ public class UniquePermutations {
     }
 }
 
-class Solution
+class PermuteUnique
 {
     public int[][] permuteUnique(int[] nums)
     {
         // Code here
         List<int[]> finalAns = new ArrayList<>();      
-        permuteUniqueHelper(0, finalAns, nums);
+        permuteUniqueRecursive(0, finalAns, nums);
         
         return finalAns.toArray(new int[finalAns.size()][]);
     }
     
-    private void permuteUniqueHelper(int currIdx, List<int[]> finalAns, int[] nums){
+    private void permuteUniqueRecursive(int currIdx, List<int[]> finalAns, int[] nums){
         
         //base condition
         if(currIdx==nums.length-1){
@@ -62,12 +51,12 @@ class Solution
         
         for(int i=currIdx;i<nums.length;i++){
             if(i==currIdx){
-                permuteUniqueHelper(currIdx+1, finalAns, nums);
+            	permuteUniqueRecursive(currIdx+1, finalAns, nums);
                 continue;
             }
             if(nums[i]!=nums[currIdx] && nums[i]!=nums[i-1]){
                 swap(currIdx, i, nums);
-                permuteUniqueHelper(currIdx+1, finalAns, nums);
+                permuteUniqueRecursive(currIdx+1, finalAns, nums);
                 swap(currIdx, i, nums);
             }
         }        
