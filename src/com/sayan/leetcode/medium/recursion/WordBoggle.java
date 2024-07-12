@@ -62,7 +62,6 @@ class WordBoggleSolution {
 		return false;
 	}
 	
-	//visited[i][j] = true;
 	
 	private boolean findNextChar(String word, char[][] board, boolean[][] visited, int idx, int rows, int cols, int r,
 			int c) {
