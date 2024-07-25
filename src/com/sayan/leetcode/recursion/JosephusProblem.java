@@ -1,4 +1,4 @@
-package com.sayan.leetcode.medium.recursion;
+package com.sayan.leetcode.recursion;
 
 import java.util.*;
 
