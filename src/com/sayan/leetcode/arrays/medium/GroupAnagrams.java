@@ -1,4 +1,4 @@
-package com.sayan.leetcode.medium.arrays;
+package com.sayan.leetcode.arrays.medium;
 
 import java.util.*;
 import java.util.stream.Collectors;

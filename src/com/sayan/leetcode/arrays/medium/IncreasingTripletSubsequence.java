@@ -1,4 +1,4 @@
-package com.sayan.leetcode.medium.arrays;
+package com.sayan.leetcode.arrays.medium;
 
 public class IncreasingTripletSubsequence {
     public static void main(String[] args) {

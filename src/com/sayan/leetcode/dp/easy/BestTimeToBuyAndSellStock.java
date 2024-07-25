@@ -1,4 +1,4 @@
-package com.sayan.leetcode.easy.dp;
+package com.sayan.leetcode.dp.easy;
 
 public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {

@@ -1,4 +1,4 @@
-package com.sayan.leetcode.medium.dp;
+package com.sayan.leetcode.dp.medium;
 
 public class JumpGame {
     public boolean canJump(int[] nums){

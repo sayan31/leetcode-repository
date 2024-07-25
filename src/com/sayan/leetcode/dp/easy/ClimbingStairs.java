@@ -1,4 +1,4 @@
-package com.sayan.leetcode.easy.dp;
+package com.sayan.leetcode.dp.easy;
 
 public class ClimbingStairs {
     public int climbStairs(int n) {

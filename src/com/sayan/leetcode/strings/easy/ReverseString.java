@@ -1,4 +1,4 @@
-package com.sayan.leetcode.easy.strings;
+package com.sayan.leetcode.strings.easy;
 
 public class ReverseString {
     public void reverseString(char[] s) {
