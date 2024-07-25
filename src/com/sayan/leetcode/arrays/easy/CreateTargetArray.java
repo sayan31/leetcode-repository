@@ -1,4 +1,4 @@
-package com.sayan.leetcode.easy.arrays;
+package com.sayan.leetcode.arrays.easy;
 
 public class CreateTargetArray {
 	
