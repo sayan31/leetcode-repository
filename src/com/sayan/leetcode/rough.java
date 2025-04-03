@@ -8,6 +8,8 @@ public class rough {
 	public static void main(String[] args) {
 		String s="geeks";
 		System.out.println(s.substring(4, 5));
+
+		System.out.println("division example: " + (0+1)/2);
 		
 		
 		boolean b = true;
