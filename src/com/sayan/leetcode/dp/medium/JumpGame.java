@@ -5,14 +5,14 @@ public class JumpGame {
         int[] memo = new int[nums.length+1];
         for(int i:memo)
             memo[i]=-1;
-        return canJumpHelper(memo,nums,0)==1?true:false;
+        return canJumpHelper(memo, nums, 0) == 1;
     }
 
     private int canJumpHelper(int[] memo, int[] nums, int currIdx) {
         if(currIdx==nums.length-1) return 1;
         if(nums[currIdx]==0) return 0;
 
-        if(memo[currIdx]!=-1) return memo[currIdx]==1?1:0;
+        if (memo[currIdx] != -1) return memo[currIdx];
 
         int canReachIdx = Math.min(currIdx+nums[currIdx],nums.length-1);
 
