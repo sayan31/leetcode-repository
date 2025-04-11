@@ -9,16 +9,16 @@ public class WildcardPatternMatching {
         System.out.println("Match : "+patternMatched(txt, pat)); // true
     }
 
-    private static String patternMatched(String txt, String pat) {
+    private static boolean patternMatched(String txt, String pat) {
         return patternMatchedHelper(txt, pat, txt.length()-1, pat.length()-1);
     }
 
-    private static String patternMatchedHelper(String txt, String pat, int txtCurr, int patCurr) {
+    private static boolean patternMatchedHelper(String txt, String pat, int txtCurr, int patCurr) {
         if((txtCurr < 0 && patCurr < 0) || (txtCurr < 0)){
-            return "true";
+            return true;
         }
         if(patCurr < 0 ) {
-            return "false";
+            return false;
         }
 
         if(pat.charAt(patCurr) == txt.charAt(txtCurr) || pat.charAt(patCurr) == '?') {
@@ -27,6 +27,6 @@ public class WildcardPatternMatching {
             return patternMatchedHelper(txt, pat, txt.indexOf(pat.charAt(patCurr-1)), patCurr-1);
         }
 
-        return "false";
+        return false;
     }
 }
